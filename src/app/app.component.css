@@ -1,0 +1,18 @@
+.alerta{
+ background-color: red;   
+}
+.info{
+    background-color: blue;
+}
+.triste{
+    color: yellow;
+}
+.alegre{
+    color: orangered;
+}
+.motivado{
+    color: fuchsia;
+}
+.cansado{
+    color: brown;
+}
