@@ -1,4 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 {{arrayEstados}}
 <div *ngFor="let estado of arrayEstados; let k = index;" (click)="clickEstado(k, estado);" class="{{estado}}">
 {{estado}}  {{k}}
@@ -6,7 +7,7 @@
 <button (click)=showHideTitle();>Click</button>
 
 <div style="text-align:center">
-  <h1 class= "{{estado}}" *ngIf="showElement == true"  (click)= changeEstado()>
+  <h1 class= "{{estado}}" (click)= changeEstado()>
 
     Welcome to {{ title }}!
   </h1>
@@ -14,5 +15,9 @@
 </div>
 
 
-<button class="{{button}}" (click)= "changeColors(k)" *ngFor="let button of start; let k = index;">{{button}}</button>
-
+<button class="{{button}}" (click)="changeColors(k)" [disabled]="showElement" *ngFor="let button of start; let k = index;">{{button}}</button>
+<button (click)="blockButtons()" >{{estat}}</button>
+{{color1234[0]}}
+{{color1234[1]}}
+{{color1234[2]}}
+{{color1234[3]}}
