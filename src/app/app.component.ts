@@ -23,40 +23,70 @@ export class AppComponent {
   showHideTitle() {
     this.showElement = !this.showElement;
   }
-
+  k4 = '';k1 = '';k = 0;k2 = '';k3 = '';
   colors = ['azul', 'rojo', 'verde', 'amarillo'];
   start = ['azul', 'azul', 'azul']
   enDis = ['enabled', 'disabled'];
-  color1 = ''; color2 = ''; color3 = ''; color4 = '';
+  final = ['verde','amarillo','verde'];
   color1234 = [];
+
   changeColors(k) {
     switch (this.start[k]) {
       case this.colors[0]: {
         this.start[k] = this.colors[1];
         this.color1234[0] = this.colors[k];
+        k=+1;
         break;
       }case this.colors[1]:{
         this.start[k] = this.colors[2];
         this.color1234[1] = this.colors[k];
+       k=+1;
         break;
       }case this.colors[2]:{
         this.start[k] = this.colors[3];
         this.color1234[2] = this.colors[k];
+        k=+1;
         break;
       }case this.colors[3]:{
         this.start[k] = this.colors[0];
         this.color1234[3] = this.start[k];
+        k=+1;
         break;
       }
     }
-  }
 
+  }
+i= 0;
+  validar(k){
+    for( this.i = 0; this.i < this.final.length; this.i++){
+      if(this.final[this.i] == this.start[this.i]){
+        console.log(this.final[this.i]);
+      console.log(this.start[this.i]);
+      }
+    }
+    /*
+    if((this.final[0]) == this.start[0]){
+      //this.k1 = 'puta';
+      console.log(this.final[k]);
+      console.log(this.start[k]);
+  }if((this.final[1]) == this.start[1]){
+    //this.k1 = 'puta';
+    console.log(this.final[k]);
+    console.log(this.start[k]);
+}if((this.final[2]) == this.start[2]){
+  //this.k1 = 'puta';
+  console.log(this.final[k]);
+  console.log(this.start[k]);
+}*/
+  
+  }
  
   blockButtons(){
     if(this.showElement){
       
       this.showElement = false;
       this.estat = 'aceptar';
+      this.validar(this.k);            
     }else{
       this.showElement = true;
       this.estat = 'validar'
