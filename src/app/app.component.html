@@ -15,6 +15,6 @@
 </div>
 
 
-<button class="{{button}}" (click)="changeColors(k)" [disabled]="showElement" *ngFor="let button of start; let k = index;">{{button}}</button>
-<button (click)="blockButtons()" >{{estat}}</button>
+<button class="{{button}}" id="but" (click)="changeColors(k)" [disabled]="showElement" *ngFor="let button of start; let k = index;"></button>
+<button (click)="blockButtons()">{{estat}}</button>
 

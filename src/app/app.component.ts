@@ -25,9 +25,9 @@ export class AppComponent {
   }
   k4 = '';k1 = '';k = 0;k2 = '';k3 = '';
   colors = ['azul', 'rojo', 'verde', 'amarillo'];
-  start = ['azul', 'azul', 'azul']
+  start = ['verde', 'verde', 'verde']
   enDis = ['enabled', 'disabled'];
-  final = ['verde','amarillo','verde'];
+  final = ['azul','amarillo','azul'];
   color1234 = [];
 
   changeColors(k) {
@@ -58,26 +58,18 @@ export class AppComponent {
   }
 i= 0;
   validar(k){
-    for( this.i = 0; this.i < this.final.length; this.i++){
-      if(this.final[this.i] == this.start[this.i]){
-        console.log(this.final[this.i]);
-      console.log(this.start[this.i]);
+    
+      if(this.final[0] == this.start[0]){
+        this.start[0] = "azulVerde";
+      }if(this.final[1] == this.start[1]){
+        this.start[1] = "amarilloVerde";
+      }if(this.final[2] == this.start[2]){
+       this.start[2] = "azulVerde";
+
+      }if(this.final[0] != this.start[0]){
+      }if(this.final[1] != this.start[1]){
+      }if(this.final[2] != this.start[2]){
       }
-    }
-    /*
-    if((this.final[0]) == this.start[0]){
-      //this.k1 = 'puta';
-      console.log(this.final[k]);
-      console.log(this.start[k]);
-  }if((this.final[1]) == this.start[1]){
-    //this.k1 = 'puta';
-    console.log(this.final[k]);
-    console.log(this.start[k]);
-}if((this.final[2]) == this.start[2]){
-  //this.k1 = 'puta';
-  console.log(this.final[k]);
-  console.log(this.start[k]);
-}*/
   
   }
  

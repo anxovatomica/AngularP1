@@ -1,6 +1,10 @@
 .alerta{
  background-color: red;   
 }
+#but{
+    width: 50px;
+    height: 35px;
+}
 .info{
     background-color: blue;
 }
@@ -15,6 +19,19 @@
 }
 .cansado{
     color: brown;
+}
+.azulVerde{
+    background-color: blue;
+    border-color: green;
+    border-width: 4px;
+}
+.amarilloVerde{
+    background-color: yellow;
+    border-color: green;
+    border-width: 4px;
+}
+.verdeInfo{
+    background-color: green;
 }
 .rojo{
     background-color: red;
