@@ -1,6 +1,10 @@
 .alerta{
  background-color: red;   
 }
+.combi{
+    height: 40px;
+    width: 55px;
+}
 #but{
     width: 50px;
     height: 35px;
@@ -8,6 +12,7 @@
 .info{
     background-color: blue;
 }
+/*
 .triste{
     color: yellow;
 }
@@ -19,31 +24,141 @@
 }
 .cansado{
     color: brown;
-}
+}*/
 .azulVerde{
     background-color: blue;
     border-color: green;
     border-width: 4px;
+    width: 50px;
+    height: 35px;
+}
+.azulRojo{
+    background-color: blue;
+    border-color: red;
+    border-width: 4px;
+    width: 50px;
+    height: 35px;
 }
 .amarilloVerde{
     background-color: yellow;
     border-color: green;
     border-width: 4px;
+    width: 50px;
+    height: 35px;
 }
+.amarilloRojo{
+    background-color: yellow;
+    border-color: red;
+    border-width: 4px;
+    width: 50px;
+    height: 35px;
+}
+#verde{
+    border-color: green;
+    border-width: 4px;
+    width: 50px;
+    height: 35px;
+}
+#rojo{
+    border-color: red;
+    border-width: 4px;
+    width: 50px;
+    height: 35px;
+}
+
+/*
+#azulVerde{
+   
+    
+}
+#azulRojo{
+   
+    border-color: red;
+    border-width: 4px;
+    width: 50px;
+    height: 35px;
+}
+#amarilloVerde{
+   
+    border-color: green;
+    border-width: 4px;
+    width: 50px;
+    height: 35px;
+}
+#amarilloRojo{
+    
+    border-color: red;
+    border-width: 4px;
+    width: 50px;
+    height: 35px;
+}*/
 .verdeInfo{
     background-color: green;
+    width: 50px;
+    height: 35px;
+}
+#el{
+    margin-top: 40px;
+    margin-left: 43%;
 }
 .rojo{
     background-color: red;
+    width:30px;
+    height:30px;
+    margin: 5px;
+    padding:10px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    font-size:11px;
+    line-height:32px;
+    text-transform: uppercase;
+    float:left;
+    
 }
 .verde{
     background-color: green;
+    
+    width:30px;
+    height:30px;
+    margin: 5px;
+    padding:10px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    font-size:11px;
+    line-height:32px;
+    text-transform: uppercase;
+    float:left;
 }
 .amarillo{
     background-color: yellow;
+    
+    width:30px;
+    height:30px;
+    margin: 5px;
+    padding:10px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    font-size:11px;
+    line-height:32px;
+    text-transform: uppercase;
+    float:left;
 }
 .azul{
     background-color: blue;
+    width:30px;
+    height:30px;
+    margin: 5px;
+    padding:10px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    font-size:11px;
+    line-height:32px;
+    text-transform: uppercase;
+    float:left;
 }
 .boton{
     width:30px;
@@ -67,4 +182,13 @@
     color:#fff;
     text-decoration:none;
     padding:5px 5px 5px 0;
+  }
+  #jaja{
+    display: block;
+    margin-left: 40%;
+  }
+  #enora{
+      display: inline-block;
+      margin-left: 40%;
+      margin-top: 30px;
   }

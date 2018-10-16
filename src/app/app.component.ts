@@ -11,8 +11,10 @@ export class AppComponent {
   estado = 'alerta';
   color = 'amarillo';
   estat = 'aceptar';
-
-  showElement = true;
+  show: boolean;
+  mostra: boolean = true;
+  ensenya:boolean = true;
+  showElement = false;
   arrayEstados = ['triste', 'alegre', 'motivado'];
   arrayButtons = ['boto1', 'boto2', 'boto3'];
   
@@ -31,6 +33,7 @@ export class AppComponent {
   color1234 = [];
 
   changeColors(k) {
+    
     switch (this.start[k]) {
       case this.colors[0]: {
         this.start[k] = this.colors[1];
@@ -57,32 +60,49 @@ export class AppComponent {
 
   }
 i= 0;
-  validar(k){
-    
-      if(this.final[0] == this.start[0]){
-        this.start[0] = "azulVerde";
-      }if(this.final[1] == this.start[1]){
-        this.start[1] = "amarilloVerde";
-      }if(this.final[2] == this.start[2]){
-       this.start[2] = "azulVerde";
+id = ["azulVerde", "amarilloVerde", "azulVerde"];
 
-      }if(this.final[0] != this.start[0]){
+save(){
+for(let i = 0; i < this.start.length; i++){
+  this.final[i] = this.start[i];
+}
+this.mostra = false;
+this.ensenya = true;
+}
+  validar(k){
+      if(this.final[0] == this.start[0]){
+        this.id[0] = "verde";
+        this.combi[0] = this.start[0];
+      }if(this.final[1] == this.start[1]){
+       this.id[1] = "verde"
+       this.combi[1] = this.start[1];
+      }if(this.final[2] == this.start[2]){
+        this.id[2] = "verde";
+        this.combi[2] = this.start[2];
+      }if(this.final[0] != this.start[0]) {
+        this.id[0] = "rojo";
+        this.combi[0] = this.start[0];
       }if(this.final[1] != this.start[1]){
+        this.id[1] = "rojo"
+        this.combi[1] = this.start[1];
       }if(this.final[2] != this.start[2]){
+        this.id[2] = "rojo";
+        this.combi[2] = this.start[2];
+      }if(this.final[0] == this.start[0] && this.final[1] == this.start[1] && this.final[2] == this.start[2]){
+        this.show = true;
       }
-  
-  }
- 
+    }
+      
+ combi = [];
   blockButtons(){
     if(this.showElement){
-      
       this.showElement = false;
       this.estat = 'aceptar';
       this.validar(this.k);            
     }else{
       this.showElement = true;
       this.estat = 'validar'
-
+      this.mostra = false;
     }
 
   }
@@ -95,8 +115,13 @@ i= 0;
       this.is_edit = true;
     }
   
-
-  
+  torna:boolean = false;
+  reinicia(){
+    for(let i = 0; i < this.final.length; i++){
+      this.final[i] = null;
+    }
+    
+  }
 
 
   changeEstado() {
@@ -107,6 +132,8 @@ i= 0;
     }
   }
 
-
+  
+  
 
 }
+
