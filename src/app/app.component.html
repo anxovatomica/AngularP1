@@ -15,11 +15,13 @@
 </div>
 
 <div id="jaja">
-<button (click)="save()" *ngIf="mostra">Crea</button>
-<button class="{{button}}" id="{{id[k]}}" (click)="changeColors(k)" [disabled]="showElement" *ngFor="let button of start; let k = index;"></button>
+<div *ngIf="hey">
+<button class="{{button}}" id="{{id[k]}}" (click)="changeColors(k)"  [disabled]="showElement" *ngFor="let button of start; let k = index;"></button>
+</div>
 <button (click)="blockButtons()" *ngIf="ensenya">{{estat}}</button>
 <br>
 </div>
+<button (click)="save()" *ngIf="mostra">Crea</button>
 <div id="el">
 <button class="{{button}}"  *ngFor="let button of combi; let k = index;"></button>
 </div>
@@ -28,4 +30,5 @@
   <h1>Ahi le has dado!</h1>
  
 </div>
-<button (click="reinicia()" *ngIf="torna">Reinicia</button>
+<br>
+<button (click)="reinicia()" *ngIf="torna" style="margin-left: 50%;">Reinicia</button>

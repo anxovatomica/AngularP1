@@ -29,7 +29,7 @@ export class AppComponent {
   colors = ['azul', 'rojo', 'verde', 'amarillo'];
   start = ['verde', 'verde', 'verde']
   enDis = ['enabled', 'disabled'];
-  final = ['azul','amarillo','azul'];
+  final = [];
   color1234 = [];
 
   changeColors(k) {
@@ -90,21 +90,22 @@ this.ensenya = true;
         this.combi[2] = this.start[2];
       }if(this.final[0] == this.start[0] && this.final[1] == this.start[1] && this.final[2] == this.start[2]){
         this.show = true;
+        this.torna = true;
       }
     }
-      
+      hey:boolean = true;
  combi = [];
   blockButtons(){
     if(this.showElement){
+      this.ensenya = true;
       this.showElement = false;
       this.estat = 'aceptar';
       this.validar(this.k);            
     }else{
       this.showElement = true;
       this.estat = 'validar'
-      this.mostra = false;
+      this.mostra = false; 
     }
-
   }
 
 
@@ -116,14 +117,16 @@ this.ensenya = true;
     }
   
   torna:boolean = false;
+
   reinicia(){
     for(let i = 0; i < this.final.length; i++){
       this.final[i] = null;
     }
-    
+    this.show = false;
+    this.torna = false;
+    this.mostra = true;
+    this.ensenya = false;
   }
-
-
   changeEstado() {
     if (this.estado == 'alerta') {
       this.estado = 'info';
@@ -131,9 +134,5 @@ this.ensenya = true;
       this.estado = 'alerta';
     }
   }
-
-  
-  
-
 }
 
